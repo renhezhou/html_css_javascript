@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>显示当前时间</title>
+    <script language="JavaScript">
+        function showtime() {
+            var now_time = new Date();//创建时间对象的实例
+            var hours = now_time.getHours();//获取当前小时数
+            var minutes = now_time.getMinutes();//获取当前分钟数
+            var seconds = now_time.getSeconds();//获取当前秒数
+            var timer = "" + ((hours > 12) ? hours - 12 : hours);//将小时数赋予变量timer
+            timer += ((minutes < 10) ? ":0" : ":") + minutes;//将分钟数赋予变量timer
+            timer += ((seconds < 10) ? ":0" : ":") + seconds;//将秒数赋予变量timer
+            timer += "" + ((hours > 12) ? "pm" : "am");//将字符am或pm赋予变量timer
+            document.clock.show.value = timer;//在名为clock的表单中输出timer
+            setTimeout(showtime, 1000);//设置每隔一秒钟自动调用一次showtime函数
+        }
+    </script>
+</head>
+<body onload="showtime()">
+<form name="clock" onsubmit="0">
+    <input type="text" name="show" size="10"
+           style="background-color: lightyellow;border-bottom-width: 3px;width: 100px;height: 50px;">
+</form>
+</body>
+</html>

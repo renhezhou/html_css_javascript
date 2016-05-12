@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>显示当前日期</title>
+    <script language="JavaScript">
+        today=new Date();
+        function initarray() {
+            this.length=initarray().arguments.length;
+            for(var i=0;i<this.length;i++){
+                this[i+1]=initarray().arguments[i];
+            }
+            var d=new initarray(
+                    "星期日","星期一","星期二","星期三","星期四","星期五","星期六"
+            );
+            document.write(today.getYear(),"年",today.getMonth()+1,"月",today.getDate(),"日",d[today.getDay()+1]);
+        }
+    </script>
+</head>
+<body onload="initarray()">
+
+</body>
+</html>

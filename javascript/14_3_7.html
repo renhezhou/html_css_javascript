@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>onBlur事件</title>
+    <script language="JavaScript">
+        function mymessage(msg) {
+            alert(msg);
+        }
+    </script>
+</head>
+<body>
+<!--失去焦点正好与获得焦点事件相对，当text对象，textarea对象或select对象不再拥有焦点而退到后台时，引发该事件-->
+<input name="text" type="text" onblur="mymessage('提示')">
+</body>
+</html>
